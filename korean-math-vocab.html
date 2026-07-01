@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korean Math Vocabulary</title>
+<link rel="stylesheet" href="korean-math-vocab-styles.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <span class="chapter-label">Ch. Math</span>
+    <span class="progress-label" id="progressLabel">1 / 1</span>
+    <button class="audio-slot" id="audioBtn" aria-label="Play audio (coming soon)">🎙</button>
+  </div>
+
+  <div class="card-stage">
+    <div class="card" id="card">
+      <div class="card-face front">
+        <div class="card-body">
+          <div class="front-word" id="frontWord"></div>
+          <div class="tap-hint">tap to flip</div>
+        </div>
+      </div>
+      <div class="card-face back">
+        <div class="card-body">
+          <div class="back-english" id="backEnglish"></div>
+          <div class="back-sentence" id="backSentence"></div>
+          <div class="back-translation" id="backTranslation"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="confidence-row hidden" id="confidenceRow">
+    <button class="confidence-btn hard" data-rating="hard" aria-label="Hard">😬</button>
+    <button class="confidence-btn ok" data-rating="ok" aria-label="OK">😐</button>
+    <button class="confidence-btn got" data-rating="got" aria-label="Got it">😊</button>
+  </div>
+
+  <div class="summary" id="summary">
+    <h1>Session complete</h1>
+    <div class="summary-stats">
+      <div class="stat-box">
+        <div class="stat-value" id="statTime">0:00</div>
+        <div class="stat-label">Time</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-value" id="statSeen">0</div>
+        <div class="stat-label">Cards seen</div>
+      </div>
+      <div class="stat-box got">
+        <div class="stat-value" id="statGot">0</div>
+        <div class="stat-label">😊 Got it</div>
+      </div>
+      <div class="stat-box ok">
+        <div class="stat-value" id="statOk">0</div>
+        <div class="stat-label">😐 OK</div>
+      </div>
+      <div class="stat-box hard">
+        <div class="stat-value" id="statHard">0</div>
+        <div class="stat-label">😬 Hard</div>
+      </div>
+    </div>
+
+    <div class="shaky-section">
+      <h2>Shaky words</h2>
+      <div class="shaky-words" id="shakyWords"></div>
+    </div>
+
+    <div class="summary-actions">
+      <button class="summary-btn" id="copyLogBtn">Copy log</button>
+      <button class="summary-btn primary" id="restartBtn">Study again</button>
+    </div>
+    <div class="copy-confirm" id="copyConfirm"></div>
+  </div>
+
+  <script src="korean-math-vocab-data.js"></script>
+  <script src="korean-math-vocab-app.js"></script>
+</body>
+</html>
